@@ -1,0 +1,211 @@
+$background-color: #191919;
+$red-color: rgb(255, 0, 0);
+$white-color: rgb(255, 255, 255);
+$font :'Poppins', sans-serif;
+$sizeTextClassique :font-size 15px;
+
+body {
+  background-color: $background-color;
+  margin-left: 6%;
+  margin-right: 6%;
+  font-family: $font; 
+}
+h1{
+  color: $red-color;
+}
+h2{
+  color: $white-color;
+}
+p{
+  color: $white-color;
+}
+#textHeader{
+  margin-bottom: 35px;
+}
+#linkShowGameList{
+  color: $red-color;
+}
+// Nav bar
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#textExplicationSite{
+  font-size: $sizeTextClassique;
+}
+#welcome{
+  font-size: 26px;
+}
+.search-container{
+  border-radius: 20px;
+  border: 2px solid $white-color;
+  height: 40px !important;
+}
+.containerSearchBar{
+  display: flex;
+  align-items: center;
+  margin: 5px;
+  width: 220px;
+}
+.form-search-navbar{
+  padding:8px;
+  border: none;
+  outline: none;
+  color: $white-color;
+  background-color: $background-color;
+}
+#buttonSearchGame{
+  background-color: transparent;
+  border: none;
+  margin-left: 2px;
+}
+#loupe{
+  background-color: transparent;
+}
+
+//Card Game list
+.articles{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.cardGame{
+  width: 33.333%;
+  margin-bottom: 20px;
+  display: grid;
+  justify-content: center;
+}
+.title-game{
+  color: $white-color;
+  margin-top: 10px;
+  font-size: $sizeTextClassique;
+}
+.image-card-page-list{
+  height: 200px;
+  width: 360px;
+}
+.linkGameDetail, #titleSite, a:visited {
+  text-decoration: none;
+  position: relative;
+  outline: none;
+  
+  &:after {
+    content: '';
+    height: 3px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    background: $red-color;
+    transition: 0.2s;
+  }
+
+  &:hover:after {
+    width: 100%;
+  }
+  
+  &.block {
+    display: block;
+    padding: 0.5em;
+    
+    &:hover {
+      background: $white-color;
+    }
+  }
+}
+.linkGameDetail{
+  color: $white-color;
+}
+#titleSite{
+  color: red;
+}
+#platformGame{
+  margin-top: -8px;
+}
+#imgPlatform{
+  height: 16px;
+  margin: 3px;
+}
+.single-img {
+  position: relative;
+  width: 30%;
+  float: left;
+  margin: 0 1%;
+}
+.img-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: $background-color;
+  opacity: 90%;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+}
+.single-img:hover .img-overlay {
+  height: 100%;
+}
+
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: $white-color;
+  text-align: center;
+  font-size: 13px;
+  font-family: $font; 
+  letter-spacing: 2px;
+  font-weight: bold;
+  width: 360px;
+}
+
+// Crad game detail
+.titleGameDetail{
+  color: $red-color;
+  font-size: 32px;
+}
+.imgDetailGame{
+   width: 112%;
+   height: 700px;
+    margin: 0;
+    margin-left: -6%;
+    margin-right: -6%;
+}
+.titleNoteGameDetail{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 25px;
+}
+.noteGame{
+  color: $red-color;
+  font-size: 26px;
+}
+.description{
+  margin-bottom: 70px;
+}
+.infoGameDetail{
+  display: flex;
+  justify-content: space-between;
+}
+.release-date{
+  margin-right: 15px;
+}
+.dev{
+   margin-right: 15px;
+   margin-left: 15px;
+}
+.publisher{
+  margin-right: 15px;
+  margin-left: 15px;
+}
+.platform{
+  margin-left: 15px;
+}
